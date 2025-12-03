@@ -6,398 +6,365 @@ import Header from "../components/Header.astro";
 <Layout title="Assegai AI Sandbox - Safe AI Agent Execution for Blockchain">
   <Header />
 
-  <!-- Hero Section -->
-  <section class="pt-32 pb-20 px-6">
-    <div class="container mx-auto max-w-6xl">
-      <div class="text-center space-y-6">
-        <div
-          class="inline-block px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm text-primary-light mb-4"
-        >
-          MVP Release - In Development
+  <!-- Hero Section - Asymmetric Layout -->
+  <section class="pt-32 pb-20 px-6 relative overflow-hidden">
+    <!-- Background Elements -->
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-20 right-10 w-96 h-96 bg-primary rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 left-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="container mx-auto max-w-7xl relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <!-- Left Column - Main Content -->
+        <div class="lg:col-span-7 space-y-8">
+          <div class="space-y-4">
+            <div class="inline-block animate-fade-in-up stagger-1">
+              <span class="text-accent font-mono text-sm tracking-wider uppercase">
+                MVP // Beta Access
+              </span>
+            </div>
+            <h1 class="text-7xl lg:text-8xl font-semibold leading-[0.95] tracking-tight animate-fade-in-up stagger-2">
+              Safe AI Agents<br/>
+              <span class="text-primary">for on-chain operations</span>
+            </h1>
+          </div>
+          
+          <p class="text-xl text-gray-400 max-w-xl leading-relaxed animate-fade-in-up stagger-3">
+            Sandboxed execution environment for AI agents with granular spending controls, 
+            token approvals, and transaction safeguards. Deploy agentic operations 
+            without risking your assets.
+          </p>
+          
+          <div class="flex flex-wrap gap-4 pt-4 animate-fade-in-up stagger-4">
+            <a
+              href="#download"
+              class="group px-8 py-4 bg-primary hover:bg-primary-dark transition-all duration-300 font-bold uppercase tracking-wide text-sm relative overflow-hidden"
+            >
+              <span class="relative z-10">Download Beta</span>
+              <div class="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+            </a>
+            <a
+              href="https://docs.assegailabs.xyz"
+              class="px-8 py-4 border-2 border-white/20 hover:border-primary transition-colors duration-300 font-bold uppercase tracking-wide text-sm"
+            >
+              Documentation
+            </a>
+          </div>
         </div>
-        <h1
-          class="text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary-light via-primary to-accent bg-clip-text text-transparent"
-        >
-          Safe AI Agents for<br />On-Chain Activity
-        </h1>
-        <p class="text-xl text-gray-400 max-w-3xl mx-auto">
-          Run sandboxed AI agents with configurable spending limits, token
-          approvals, and transaction controls. Execute blockchain operations
-          safely with built-in safeguards.
+        
+        <!-- Right Column - Stats/Info Cards -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="bg-dark-lighter border-l-4 border-primary p-6 animate-fade-in-up stagger-3">
+            <div class="text-4xl font-semibold text-primary mb-2">Fine-Grained</div>
+            <div class="text-sm text-gray-400 uppercase tracking-wide">Agent Control</div>
+          </div>
+          <div class="bg-dark-lighter border-l-4 border-accent p-6 ml-8 animate-fade-in-up stagger-4">
+            <div class="text-4xl font-semibold text-accent mb-2">Unified</div>
+            <div class="text-sm text-gray-400 uppercase tracking-wide">Agent Launchpad</div>
+          </div>
+          <div class="bg-dark-lighter border-l-4 border-primary p-6 animate-fade-in-up stagger-5">
+            <div class="text-4xl font-semibold text-primary mb-2">Scalable</div>
+            <div class="text-sm text-gray-400 uppercase tracking-wide">via cross-platform SDK</div>
+          </div>
+                    <div class="bg-dark-lighter border-l-4 border-accent p-6 ml-8 animate-fade-in-up stagger-4">
+            <div class="text-4xl font-semibold text-accent mb-2">Open-Source</div>
+            <div class="text-sm text-gray-400 uppercase tracking-wide">Coming soon</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section - Asymmetric Bento Grid -->
+  <section id="features" class="py-32 px-6 bg-dark-lighter/50 relative">
+    <div class="absolute inset-0 opacity-5" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(139, 92, 246, 0.5) 10px, rgba(139, 92, 246, 0.5) 11px);"></div>
+    
+    <div class="container mx-auto max-w-7xl relative z-10">
+      <div class="mb-16 scroll-reveal">
+        <h2 class="text-5xl font-semibold tracking-tight mb-4">
+          Security-First<br/>
+          <span class="text-accent">Architecture</span>
+        </h2>
+        <p class="text-gray-400 text-lg max-w-2xl">
+          Built from the ground up with security and control as core principles.
         </p>
-        <div class="flex items-center justify-center gap-4 pt-4">
-          <a
-            href="#download"
-            class="px-6 py-3 bg-primary hover:bg-primary-dark rounded-lg font-medium transition-colors"
-          >
-            Download Beta
-          </a>
-          <a
-            href="https://docs.assegailabs.xyz"
-            class="px-6 py-3 bg-dark-lighter hover:bg-dark-lighter/80 border border-white/10 rounded-lg font-medium transition-colors"
-          >
-            Read Docs
-          </a>
+      </div>
+      
+      <!-- Bento Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-6 gap-6 auto-rows-fr scroll-reveal">
+        <!-- Large Feature Card -->
+        <div class="md:col-span-3 md:row-span-2 bg-dark-card border border-white/10 p-8 relative overflow-hidden group">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-3xl group-hover:w-64 group-hover:h-64 transition-all duration-700"></div>
+          <div class="relative z-10 h-full flex flex-col justify-between">
+            <div>
+              <div class="w-16 h-16 bg-primary/20 flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                </svg>
+              </div>
+              <h3 class="text-3xl font-semibold mb-4">Sandboxed Execution</h3>
+              <p class="text-gray-400 text-lg leading-relaxed">
+                AI agents operate in isolated Docker containers by default, with strict resource limits, 
+                filesystem access controls, and network restrictions.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Medium Feature Cards -->
+        <div class="md:col-span-3 bg-dark-card border border-white/10 p-8 relative group">
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-accent/10 blur-3xl group-hover:w-48 group-hover:h-48 transition-all duration-700"></div>
+          <div class="relative z-10">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-12 h-12 bg-accent/20 flex items-center justify-center">
+                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+              </div>
+              <span class="text-5xl font-semibold text-accent/20">01</span>
+            </div>
+            <h3 class="text-2xl font-semibold mb-3">Spending Limits</h3>
+            <p class="text-gray-400">
+              Configure per-token spending caps, daily limits, and transaction thresholds. 
+              Agents can't exceed predefined budgets.
+            </p>
+          </div>
+        </div>
+        
+        <div class="md:col-span-3 bg-dark-card border border-white/10 p-8 relative group">
+          <div class="absolute top-0 right-0 w-24 h-24 bg-primary/10 blur-3xl group-hover:w-48 group-hover:h-48 transition-all duration-700"></div>
+          <div class="relative z-10">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-12 h-12 bg-primary/20 flex items-center justify-center">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                </svg>
+              </div>
+              <span class="text-5xl font-semibold text-primary/20">02</span>
+            </div>
+            <h3 class="text-2xl font-semibold mb-3">Transaction Approval</h3>
+            <p class="text-gray-400">
+              Require explicit user approval for transactions via desktop notifications 
+              and approval workflow.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Small Feature Cards -->
+        <div class="md:col-span-2 bg-gradient-to-br from-dark-card to-dark-lighter border border-white/10 p-6">
+          <div class="text-accent font-mono text-xs mb-2">LOGGING</div>
+          <h3 class="text-xl font-semibold mb-2">Complete Audit Trail</h3>
+          <p class="text-gray-400 text-sm">Full transaction history and agent activity logs.</p>
+        </div>
+        
+        <div class="md:col-span-2 bg-gradient-to-br from-dark-card to-dark-lighter border border-white/10 p-6">
+          <div class="text-primary font-mono text-xs mb-2">PLATFORM</div>
+          <h3 class="text-xl font-semibold mb-2">Cross-Platform</h3>
+          <p class="text-gray-400 text-sm">Native support for macOS, Windows, and Linux via Electron.</p>
+        </div>
+        
+        <div class="md:col-span-2 bg-gradient-to-br from-dark-card to-dark-lighter border border-white/10 p-6">
+          <div class="text-accent font-mono text-xs mb-2">CONFIG</div>
+          <h3 class="text-xl font-semibold mb-2">Granular Control</h3>
+          <p class="text-gray-400 text-sm">Fine-tune permissions, approvals, and execution policies.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Features Section -->
-  <section id="features" class="py-20 px-6 bg-dark-lighter/50">
-    <div class="container mx-auto max-w-6xl">
-      <h2 class="text-3xl font-bold text-center mb-12">Key Features</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div
-          class="bg-dark-card border border-white/10 rounded-lg p-6 space-y-4"
-        >
-          <div
-            class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center"
-          >
-            <svg
-              class="w-6 h-6 text-primary"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-              ></path>
-            </svg>
+  <!-- Use Cases Section - Diagonal Layout -->
+  <section class="py-32 px-6">
+    <div class="container mx-auto max-w-7xl">
+      <div class="grid lg:grid-cols-2 gap-16 items-start">
+        <div class="lg:sticky lg:top-32 scroll-reveal">
+          <h2 class="text-5xl font-semibold tracking-tight mb-6">
+            Built for<br/>
+            <span class="text-primary">Real-World</span><br/>
+            Use Cases
+          </h2>
+          <p class="text-gray-400 text-lg">
+            From automated trading to smart contract testing, 
+            Assegai provides the security infrastructure for 
+            production AI agent deployments.
+          </p>
+        </div>
+        
+        <div class="space-y-8 scroll-reveal">
+          <div class="border-l-4 border-primary pl-6 py-4 hover:bg-dark-lighter/30 transition-colors duration-300">
+            <h3 class="text-2xl font-semibold mb-2 text-primary-light">DeFi Trading Bots</h3>
+            <p class="text-gray-400 leading-relaxed">
+              Deploy AI-powered trading strategies with strict capital controls and automatic 
+              risk management. Set per-token budgets and require approval for large trades.
+            </p>
           </div>
-          <h3 class="text-xl font-semibold">Sandboxed Execution</h3>
-          <p class="text-gray-400">
-            AI agents run in isolated environments with strict resource and
-            permission controls.
-          </p>
-        </div>
-
-        <div
-          class="bg-dark-card border border-white/10 rounded-lg p-6 space-y-4"
-        >
-          <div
-            class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center"
-          >
-            <svg
-              class="w-6 h-6 text-accent"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-              ></path>
-            </svg>
+          
+          <div class="border-l-4 border-accent pl-6 py-4 hover:bg-dark-lighter/30 transition-colors duration-300">
+            <h3 class="text-2xl font-semibold mb-2 text-accent-light">NFT Operations</h3>
+            <p class="text-gray-400 leading-relaxed">
+              Automate NFT minting, transfers, and marketplace interactions with approval 
+              safeguards and transaction logging.
+            </p>
           </div>
-          <h3 class="text-xl font-semibold">Spending Limits</h3>
-          <p class="text-gray-400">
-            Set per-token spending limits and approval thresholds to control
-            agent actions.
-          </p>
-        </div>
-
-        <div
-          class="bg-dark-card border border-white/10 rounded-lg p-6 space-y-4"
-        >
-          <div
-            class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center"
-          >
-            <svg
-              class="w-6 h-6 text-primary"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-              ></path>
-            </svg>
+          
+          <div class="border-l-4 border-primary pl-6 py-4 hover:bg-dark-lighter/30 transition-colors duration-300">
+            <h3 class="text-2xl font-semibold mb-2 text-primary-light">Portfolio Management</h3>
+            <p class="text-gray-400 leading-relaxed">
+              Let AI agents rebalance and manage portfolios within defined risk parameters. 
+              Full audit trail of all rebalancing decisions.
+            </p>
           </div>
-          <h3 class="text-xl font-semibold">Transaction Approval</h3>
-          <p class="text-gray-400">
-            Optional user approval workflow with desktop notifications for
-            transaction execution.
-          </p>
-        </div>
-
-        <div
-          class="bg-dark-card border border-white/10 rounded-lg p-6 space-y-4"
-        >
-          <div
-            class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center"
-          >
-            <svg
-              class="w-6 h-6 text-accent"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-            </svg>
+          
+          <div class="border-l-4 border-accent pl-6 py-4 hover:bg-dark-lighter/30 transition-colors duration-300">
+            <h3 class="text-2xl font-semibold mb-2 text-accent-light">Smart Contract Testing</h3>
+            <p class="text-gray-400 leading-relaxed">
+              Test contract interactions safely in a controlled sandbox before mainnet 
+              deployment. Simulate complex multi-agent scenarios.
+            </p>
           </div>
-          <h3 class="text-xl font-semibold">Cross-Platform</h3>
-          <p class="text-gray-400">
-            Built with Electron for seamless deployment on macOS, Windows, and
-            Linux.
-          </p>
-        </div>
-
-        <div
-          class="bg-dark-card border border-white/10 rounded-lg p-6 space-y-4"
-        >
-          <div
-            class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center"
-          >
-            <svg
-              class="w-6 h-6 text-primary"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-              ></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold">Activity Logging</h3>
-          <p class="text-gray-400">
-            Complete audit trail of all agent actions and blockchain
-            transactions.
-          </p>
-        </div>
-
-        <div
-          class="bg-dark-card border border-white/10 rounded-lg p-6 space-y-4"
-        >
-          <div
-            class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center"
-          >
-            <svg
-              class="w-6 h-6 text-accent"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-              ></path>
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold">Flexible Configuration</h3>
-          <p class="text-gray-400">
-            Granular control over agent permissions, token allowances, and
-            execution policies.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Use Cases Section -->
-  <section class="py-20 px-6">
-    <div class="container mx-auto max-w-6xl">
-      <h2 class="text-3xl font-bold text-center mb-12">Use Cases</h2>
-      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        <div class="space-y-4">
-          <h3 class="text-xl font-semibold text-primary-light">
-            DeFi Trading Bots
-          </h3>
-          <p class="text-gray-400">
-            Deploy AI-powered trading strategies with strict capital controls
-            and automatic risk management.
-          </p>
-        </div>
-        <div class="space-y-4">
-          <h3 class="text-xl font-semibold text-accent-light">
-            NFT Operations
-          </h3>
-          <p class="text-gray-400">
-            Automate NFT minting, transfers, and marketplace interactions with
-            approval safeguards.
-          </p>
-        </div>
-        <div class="space-y-4">
-          <h3 class="text-xl font-semibold text-primary-light">
-            Portfolio Management
-          </h3>
-          <p class="text-gray-400">
-            Let AI agents rebalance and manage portfolios within defined risk
-            parameters.
-          </p>
-        </div>
-        <div class="space-y-4">
-          <h3 class="text-xl font-semibold text-accent-light">
-            Smart Contract Testing
-          </h3>
-          <p class="text-gray-400">
-            Test contract interactions safely in a controlled environment before
-            mainnet deployment.
-          </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Download Section -->
-  <section id="download" class="py-20 px-6 bg-dark-lighter/50">
-    <div class="container mx-auto max-w-4xl text-center space-y-8">
-      <h2 class="text-3xl font-bold">Download Beta</h2>
-      <p class="text-gray-400 max-w-2xl mx-auto">
-        The Assegai AI Sandbox is currently in MVP development. Beta releases
-        will be available soon for early testers and co-development partners.
-      </p>
-      <div class="grid md:grid-cols-3 gap-4 pt-4">
-        <button
-          disabled
-          class="px-6 py-4 bg-dark-card border border-white/10 rounded-lg font-medium opacity-50 cursor-not-allowed"
-        >
-          <div class="flex items-center justify-center space-x-2">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"
-              ></path>
-            </svg>
-            <span>macOS</span>
-          </div>
-          <div class="text-xs text-gray-500 mt-2">Coming Soon</div>
-        </button>
-
-        <button
-          disabled
-          class="px-6 py-4 bg-dark-card border border-white/10 rounded-lg font-medium opacity-50 cursor-not-allowed"
-        >
-          <div class="flex items-center justify-center space-x-2">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"
-              ></path>
-            </svg>
-            <span>Windows</span>
-          </div>
-          <div class="text-xs text-gray-500 mt-2">Coming Soon</div>
-        </button>
-
-        <button
-          disabled
-          class="px-6 py-4 bg-dark-card border border-white/10 rounded-lg font-medium opacity-50 cursor-not-allowed"
-        >
-          <div class="flex items-center justify-center space-x-2">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.84-.406 1.781-.406 2.729 0 1.031.133 2.076.396 3.1.397 1.553 1.32 2.98 2.503 3.87.91.684 1.965 1.107 3.084 1.318.817.154 1.633.231 2.445.231.812 0 1.628-.077 2.445-.231 1.12-.211 2.174-.634 3.084-1.318 1.183-.89 2.106-2.317 2.503-3.87.263-1.024.396-2.069.396-3.1 0-.948-.128-1.889-.406-2.729-.589-1.771-1.831-3.47-2.716-4.521-.75-1.067-.974-1.928-1.05-3.02-.065-1.491 1.056-5.965-3.17-6.298-.165-.013-.325-.021-.48-.021zm-.48 4.021c.74 0 1.5.035 2.25.105.195 1.79 1.108 3.157 2.103 4.552.717 1.007 1.463 2.122 1.946 3.389.242.634.365 1.304.365 1.991 0 .744-.105 1.497-.315 2.235-.316 1.105-.965 2.12-1.785 2.763-.65.511-1.405.846-2.205 1.013-.735.153-1.485.23-2.235.23s-1.5-.077-2.235-.23c-.8-.167-1.555-.502-2.205-1.013-.82-.643-1.469-1.658-1.785-2.763-.21-.738-.315-1.491-.315-2.235 0-.687.123-1.357.365-1.991.483-1.267 1.229-2.382 1.946-3.389.995-1.395 1.908-2.762 2.103-4.552.75-.07 1.51-.105 2.25-.105z"
-              ></path>
-            </svg>
-            <span>Linux</span>
-          </div>
-          <div class="text-xs text-gray-500 mt-2">Coming Soon</div>
-        </button>
+  <section id="download" class="py-32 px-6 bg-dark-lighter/50 relative overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="container mx-auto max-w-5xl relative z-10">
+      <div class="text-center mb-16 scroll-reveal">
+        <div class="inline-block mb-4">
+          <span class="text-accent font-mono text-sm tracking-wider uppercase">
+            Beta Access Available Soon
+          </span>
+        </div>
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+          Currently in MVP development. Beta releases will be available for early testers 
+          and co-development partners.
+        </p>
       </div>
-      <p class="text-sm text-gray-500 pt-4">
-        Interested in early access? Contact us at
+      
+      <div class="grid md:grid-cols-3 gap-6 scroll-reveal">
+        <div class="bg-dark-card border border-white/20 p-8 opacity-50 relative">
+          <div class="absolute top-4 right-4 text-xs font-mono text-gray-500 uppercase">Coming Soon</div>
+          <div class="mb-6">
+            <svg class="w-12 h-12 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold mb-2">macOS</h3>
+          <p class="text-gray-500 text-sm">Intel & Apple Silicon</p>
+        </div>
+        
+        <div class="bg-dark-card border border-white/20 p-8 opacity-50 relative">
+          <div class="absolute top-4 right-4 text-xs font-mono text-gray-500 uppercase">Coming Soon</div>
+          <div class="mb-6">
+            <svg class="w-12 h-12 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold mb-2">Windows</h3>
+          <p class="text-gray-500 text-sm">Windows 10/11</p>
+        </div>
+        
+        <div class="bg-dark-card border border-white/20 p-8 opacity-50 relative">
+          <div class="absolute top-4 right-4 text-xs font-mono text-gray-500 uppercase">Coming Soon</div>
+          <div class="mb-6">
+            <svg class="w-12 h-12 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.84-.406 1.781-.406 2.729 0 1.031.133 2.076.396 3.1.397 1.553 1.32 2.98 2.503 3.87.91.684 1.965 1.107 3.084 1.318.817.154 1.633.231 2.445.231.812 0 1.628-.077 2.445-.231 1.12-.211 2.174-.634 3.084-1.318 1.183-.89 2.106-2.317 2.503-3.87.263-1.024.396-2.069.396-3.1 0-.948-.128-1.889-.406-2.729-.589-1.771-1.831-3.47-2.716-4.521-.75-1.067-.974-1.928-1.05-3.02-.065-1.491 1.056-5.965-3.17-6.298-.165-.013-.325-.021-.48-.021zm-.48 4.021c.74 0 1.5.035 2.25.105.195 1.79 1.108 3.157 2.103 4.552.717 1.007 1.463 2.122 1.946 3.389.242.634.365 1.304.365 1.991 0 .744-.105 1.497-.315 2.235-.316 1.105-.965 2.12-1.785 2.763-.65.511-1.405.846-2.205 1.013-.735.153-1.485.23-2.235.23s-1.5-.077-2.235-.23c-.8-.167-1.555-.502-2.205-1.013-.82-.643-1.469-1.658-1.785-2.763-.21-.738-.315-1.491-.315-2.235 0-.687.123-1.357.365-1.991.483-1.267 1.229-2.382 1.946-3.389.995-1.395 1.908-2.762 2.103-4.552.75-.07 1.51-.105 2.25-.105z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold mb-2">Linux</h3>
+          <p class="text-gray-500 text-sm">Debian/Ubuntu, Fedora</p>
+        </div>
+      </div>
+      
+      <div class="mt-12 text-center scroll-reveal">
+        <p class="text-gray-400 mb-4">
+          Interested in early access or partnership opportunities?
+        </p>
         <a
           href="mailto:dev@assegailabs.xyz"
-          class="text-primary-light hover:text-primary">dev@assegailabs.xyz</a
+          class="inline-block px-8 py-4 bg-primary hover:bg-primary-dark transition-colors font-bold uppercase tracking-wide text-sm"
         >
-      </p>
+          Contact Us
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="border-t border-white/10 py-12 px-6">
-    <div class="container mx-auto max-w-6xl">
-      <div class="grid md:grid-cols-4 gap-8">
-        <div class="space-y-4">
-          <div class="flex items-center space-x-2">
-            <img
-              src="/icon.svg"
-              alt="Logo"
-              class="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-lg"
-            />
-            <span class="font-semibold">Assegai Labs</span>
+  <footer class="border-t border-white/10 py-16 px-6">
+    <div class="container mx-auto max-w-7xl">
+      <div class="grid md:grid-cols-12 gap-12 mb-12">
+        <!-- Brand Column -->
+        <div class="md:col-span-5 space-y-6">
+          <div class="flex items-center space-x-3">
+            <img src="/icon.svg" alt="Logo" class="w-10 h-10" />
+            <div>
+              <div class="text-xl font-semibold">Assegai Labs</div>
+            </div>
           </div>
+          <p class="text-gray-400 text-sm leading-relaxed max-w-md">
+            Infrastructure for the Agentic Economy
+          </p>
         </div>
-
-        <div>
-          <h4 class="font-semibold mb-4">Product</h4>
-          <ul class="space-y-2 text-sm text-gray-400">
-            <li>
-              <a href="#features" class="hover:text-white transition-colors"
-                >Features</a>
-            </li>
-            <li>
-              <a href="#download" class="hover:text-white transition-colors"
-                >Download</a>
-            </li>
+        
+        <!-- Links Columns -->
+        <div class="md:col-span-2">
+          <h4 class="font-semibold uppercase text-xs tracking-wider mb-4 text-gray-500">Product</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="#features" class="text-gray-400 hover:text-primary transition-colors">Features</a></li>
+            <li><a href="#download" class="text-gray-400 hover:text-primary transition-colors">Download</a></li>
           </ul>
         </div>
-
-        <div>
-          <h4 class="font-semibold mb-4">Resources</h4>
-          <ul class="space-y-2 text-sm text-gray-400">
-            <li>
-              <a
-                href="https://docs.assegailabs.xyz"
-                class="hover:text-white transition-colors">Docs</a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/assegailabs"
-                class="hover:text-white transition-colors">GitHub</a>
-            </li>
-            <li>
-              <a
-                href="mailto:dev@assegailabs.xyz"
-                class="hover:text-white transition-colors">Support</a>
-            </li>
+        
+        <div class="md:col-span-2">
+          <h4 class="font-semibold uppercase text-xs tracking-wider mb-4 text-gray-500">Resources</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="https://docs.assegailabs.xyz" class="text-gray-400 hover:text-primary transition-colors">Documentation</a></li>
+            <li><a href="https://github.com/assegailabs" class="text-gray-400 hover:text-primary transition-colors">GitHub</a></li>
+            <li><a href="mailto:dev@assegailabs.xyz" class="text-gray-400 hover:text-primary transition-colors">Support</a></li>
           </ul>
         </div>
-
-        <div>
-          <h4 class="font-semibold mb-4">Legal</h4>
-          <ul class="space-y-2 text-sm text-gray-400">
-            <li>
-              <a
-                href="https://docs.assegailabs.xyz/guides/privacy-policy/"
-                class="hover:text-white transition-colors">Privacy Policy</a>
-            </li>
-            <li>
-              <a
-                href="#https://docs.assegailabs.xyz/guides/terms-of-service/"
-                class="hover:text-white transition-colors">Terms of Service</a>
-            </li>
+        
+        <div class="md:col-span-3">
+          <h4 class="font-semibold uppercase text-xs tracking-wider mb-4 text-gray-500">Legal</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="https://docs.assegailabs.xyz/guides/privacy-policy/" class="text-gray-400 hover:text-primary transition-colors">Privacy Policy</a></li>
+            <li><a href="https://docs.assegailabs.xyz/guides/terms-of-service/" class="text-gray-400 hover:text-primary transition-colors">Terms of Service</a></li>
           </ul>
         </div>
       </div>
-
-      <div
-        class="border-t border-white/10 mt-12 pt-8 text-center text-sm text-gray-400"
-      >
-        <p>© {new Date().getFullYear()} Assegai Labs. All rights reserved.</p>
+      
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-sm text-gray-500">
+          © {new Date().getFullYear()} Assegai Labs. All rights reserved.
+        </p>
+        <div class="flex items-center gap-2 text-xs text-gray-600 font-mono">
+          <span>v0.1.0-beta</span>
+          <span>•</span>
+          <span>MVP Development</span>
+        </div>
       </div>
     </div>
   </footer>
 </Layout>
+
+<style>
+  /* Add subtle grain texture */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.03;
+    z-index: -1;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' /%3E%3C/svg%3E");
+  }
+</style>
